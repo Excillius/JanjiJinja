@@ -1,0 +1,15 @@
+version: "3.7"
+
+services:
+
+  flask:
+    build: ./
+    volumes:
+      - ./:/app
+    ports:
+      # public:local
+      - "14599:5000"
+    container_name: jinjaTurtle
+    restart: always
+    environment:
+      - APP_NAME=jinjaTurtle
